@@ -54,7 +54,8 @@ async def inference(request: Request):
 
     if mode == 'banana_compat' and 'images' in output:
         output = {
-            "base64_output": output["images"][0]
+            "base64_output": output["images"][0],
+            "callParams": params
         }   
 
     return output
